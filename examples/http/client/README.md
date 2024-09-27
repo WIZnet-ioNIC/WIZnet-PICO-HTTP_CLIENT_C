@@ -1,10 +1,10 @@
-# How to Test HTTP Server Example
+# How to Test HTTP Client Example
 
 
 
 ## Step 1: Prepare software
 
-The following serial terminal program is required for HTTP Server example test, download and install from below link.
+The following serial terminal program is required for HTTP Client example test, download and install from below link.
 
 - [**Tera Term**][link-tera_term]
 
@@ -22,11 +22,11 @@ If you are using W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-P
 
 
 
-## Step 3: Setup HTTP Server Example
+## Step 3: Setup HTTP Client Example
 
 To test the HTTP Server example, minor settings shall be done in code.
 
-1. Setup SPI port and pin in 'w5x00_spi.h' in 'WIZnet-PICO-C/port/ioLibrary_Driver/' directory.
+1. Setup SPI port and pin in 'w5x00_spi.h' in 'WIZnet-PICO-HTTP_CLIENT_C/port/ioLibrary_Driver/' directory.
 
 Setup the SPI interface you use.
 - If you use the W5100S-EVB-Pico, W5500-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2,
@@ -42,7 +42,7 @@ Setup the SPI interface you use.
 #define PIN_RST 20
 ```
 
-If you want to test with the HTTP Server example using SPI DMA, uncomment USE_SPI_DMA.
+If you want to test with the HTTP Client example using SPI DMA, uncomment USE_SPI_DMA.
 
 ```cpp
 /* Use SPI DMA */
@@ -60,7 +60,7 @@ If you want to test with the HTTP Server example using SPI DMA, uncomment USE_SP
 #define PIN_RST 25
 ```
 
-2. Setup network configuration such as IP in 'w5x00_http_server.c' which is the HTTP Server example in 'WIZnet-PICO-C/examples/http/server/' directory.
+2. Setup network configuration such as IP in 'w5x00_http_client.c' which is the HTTP Client example in 'WIZnet-PICO-HTTP_CLIENT_C/examples/http/client/' directory.
 
 Setup IP and other network settings to suit your network environment.
 
@@ -77,13 +77,23 @@ static wiz_NetInfo g_net_info =
 };
 ```
 
+Setup HTTP server configuration.
+
+```cpp
+static uint8_t g_http_target_domain[] = "www.google.com";   
+static uint8_t g_http_target_ip[4] = {
+    0,
+};
+uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W6100&oq=W6100&gs_l=psy-ab.3...0.0..6208...0.0..0.0.0.......0......gws-wiz.eWEWFN8TORw";
+```
+
 
 
 ## Step 4: Build
 
-1. After completing the HTTP Server example configuration, click 'build' in the status bar at the bottom of Visual Studio Code or press the 'F7' button on the keyboard to build.
+1. After completing the HTTP Client example configuration, click 'build' in the status bar at the bottom of Visual Studio Code or press the 'F7' button on the keyboard to build.
 
-2. When the build is completed, 'w5x00_http_server.uf2' is generated in 'WIZnet-PICO-C/build/examples/http/server/' directory.
+2. When the build is completed, 'w5x00_http_client.uf2' is generated in 'WIZnet-PICO-HTTP_CLIENT_C/build/examples/http/client/' directory.
 
 
 
@@ -93,7 +103,7 @@ static wiz_NetInfo g_net_info =
 
 ![][link-raspberry_pi_pico_usb_mass_storage]
 
-2. Drag and drop 'w5x00_http_server.uf2' onto the USB mass storage device 'RPI-RP2'.
+2. Drag and drop 'w5x00_http_client.uf2' onto the USB mass storage device 'RPI-RP2'.
 
 3. Connect to the serial COM port of Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2 with Tera Term.
 
@@ -101,16 +111,9 @@ static wiz_NetInfo g_net_info =
 
 4. Reset your board.
 
-5. If the HTTP Server example works normally on Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2, you can see the network information of Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2 and the HTTP server is open.
+5. If the HTTP Client example works normally on Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2, you can see the network information of Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2 and sending requests to the HTTP server and receiving responses.   
 
-![][link-see_network_information_of_raspberry_pi_pico_and_open_http_server]
-
-6. Connect to the open HTTP server, you can see the output on the web page. When connecting to the HTTP server, you need to enter is the IP that was configured in Step 3.
-
-![][link-connect_to_http_server_1]
-
-![][link-connect_to_http_server_2]
-
+![image](https://github.com/user-attachments/assets/f7236431-98f1-4a4a-9567-1fd352687712)
 
 
 <!--
