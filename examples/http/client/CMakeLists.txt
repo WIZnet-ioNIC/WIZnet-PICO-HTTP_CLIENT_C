@@ -1,16 +1,17 @@
-set(TARGET_NAME w5x00_sntp)
+set(TARGET_NAME w5x00_http_client)
 
 add_executable(${TARGET_NAME}
         ${TARGET_NAME}.c
         )
 
-target_link_libraries(${TARGET_NAME} PUBLIC
+target_link_libraries(${TARGET_NAME} PRIVATE
         pico_stdlib
         hardware_spi
         hardware_dma
         ETHERNET_FILES
+        DNS_FILES
         IOLIBRARY_FILES
-        SNTP_FILES
+        HTTP_CLIENT_FILES
         TIMER_FILES
         )
 

@@ -167,3 +167,16 @@ target_include_directories(SNTP_FILES PUBLIC
         ${WIZNET_DIR}/Ethernet
         ${WIZNET_DIR}/Internet/SNTP
         )
+
+# HTTP Client
+add_library(HTTP_CLIENT_FILES STATIC)
+
+target_sources(HTTP_CLIENT_FILES PUBLIC
+        ${WIZNET_DIR}/../httpClient/httpClient.c
+        )
+
+target_include_directories(HTTP_CLIENT_FILES PUBLIC
+        ${WIZNET_DIR}/Ethernet  
+        ${WIZNET_DIR}/../httpClient
+        )
+
