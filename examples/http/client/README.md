@@ -112,8 +112,7 @@ uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W6100&oq=W6100&gs_l=psy-ab.
 4. Reset your board.
 
 5. If the HTTP Client example works normally on Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2, you can see the network information of Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2 and sending requests to the HTTP server and receiving responses.   
-
-![image](https://github.com/user-attachments/assets/f7236431-98f1-4a4a-9567-1fd352687712)
+![image](https://github.com/user-attachments/assets/32d625c3-ad18-4da3-bbe0-aa7da101d45a)
 
 
 <!--
