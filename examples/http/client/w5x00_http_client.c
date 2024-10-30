@@ -68,7 +68,8 @@ static uint8_t g_http_target_domain[] = "www.google.com";
 static uint8_t g_http_target_ip[4] = {
     0,
 };
-uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W6100&oq=W6100&gs_l=psy-ab.3...0.0..6208...0.0..0.0.0.......0......gws-wiz.eWEWFN8TORw";
+
+uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W5500&oq=W5500&gs_l=psy-ab.3...0.0..6208...0.0..0.0.0.......0......gws-wiz.eWEWFN8TORw";
 uint8_t flag_sent_http_request = 0;
 
 /**
