@@ -24,7 +24,7 @@ If you are using W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-P
 
 ## Step 3: Setup HTTP Client Example
 
-To test the HTTP Server example, minor settings shall be done in code.
+To test the HTTP Client example, minor settings shall be done in code.
 
 1. Setup SPI port and pin in 'w5x00_spi.h' in 'WIZnet-PICO-HTTP_CLIENT_C/port/ioLibrary_Driver/' directory.
 
@@ -77,7 +77,7 @@ static wiz_NetInfo g_net_info =
 };
 ```
 
-Setup HTTP server configuration.
+Setup HTTP client configuration.
 
 ```cpp
 static uint8_t g_http_target_domain[] = "www.google.com";   
