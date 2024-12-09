@@ -38,21 +38,10 @@ The ethernet examples use **Raspberry Pi Pico** and **WIZnet Ethernet HAT** - et
 <a name="ethernet_example_structure"></a>
 ## Ethernet example structure
 
-Examples are available at '**WIZnet-PICO-C/examples/**' directory. As of now, following examples are provided.
+Examples are available at '**WIZnet-PICO-HTTP_CLIENT_C/examples/**' directory. As of now, following examples are provided.
 
-- [**DHCP & DNS**][link-dhcp_dns]
-- [**FTP**][link-ftp]
-	- [**Client**][link-ftp_client]
-	- [**Server**][link-ftp_server]
 - [**HTTP**][link-http]
-	- [**Server**][link-http_server]
-- [**Loopback**][link-loopback]
-- [**MQTT**][link-mqtt]
-	- [**Publish**][link-mqtt_publish]
-	- [**Publish & Subscribe**][link-mqtt_publish_subscribe]
-	- [**Subscribe**][link-mqtt_subscribe]
-- [**SNTP**][link-sntp]
-- [**TCP Client over SSL**][link-tcp_client_over_ssl]
+	- [**Client**][link-http_client]
 
 Note that **ioLibrary_Driver**, **mbedtls**, **pico-sdk** are needed to run ethernet examples.
 
@@ -60,15 +49,15 @@ Note that **ioLibrary_Driver**, **mbedtls**, **pico-sdk** are needed to run ethe
 - **mbedtls** library supports additional algorithms and support related to SSL and TLS connections.
 - **pico-sdk** is made available by Pico to enable developers to build software applications for the Pico platform.
 
-Libraries are located in the '**WIZnet-PICO-C/libraries/**' directory.
+Libraries are located in the '**WIZnet-PICO-HTTP_CLIENT_C/libraries/**' directory.
 
 - [**ioLibrary_Driver**][link-iolibrary_driver]
 - [**mbedtls**][link-mbedtls]
 - [**pico-sdk**][link-pico_sdk]
 
-If you want to modify the code that MCU-dependent and use a MCU other than **RP2040**, you can modify it in the '**WIZnet-PICO-C/port/**' directory.
+If you want to modify the code that MCU-dependent and use a MCU other than **RP2040**, you can modify it in the '**WIZnet-PICO-HTTP_CLIENT_C/port/**' directory.
 
-port is located in the '**WIZnet-PICO-C/port/**' directory.
+port is located in the '**WIZnet-PICO-HTTP_CLIENT_C/port/**' directory.
 
 - [**ioLibrary_Driver**][link-port_iolibrary_driver]
 - [**mbedtls**][link-port_mbedtls]
@@ -96,14 +85,14 @@ cd [user path]
 cd D:/WIZnet-PICO
 
 /* Clone */
-git clone --recurse-submodules https://github.com/Wiznet/WIZnet-PICO-C.git
+git clone --recurse-submodules https://github.com/Wiznet-ioNIC/WIZnet-PICO-HTTP_CLIENT_C.git
 ```
 
 With Visual Studio Code, the library set as a submodule is automatically downloaded, so it doesn't matter whether the library set as a submodule is an empty directory or not, so refer to it.
 
 2. Setup board
 
-Setup the board in '**CMakeLists.txt**' in '**WIZnet-PICO-C/**' directory according to the evaluation board to be used referring to the following.
+Setup the board in '**CMakeLists.txt**' in '**WIZnet-PICO-HTTP_CLIENT_C/**' directory according to the evaluation board to be used referring to the following.
 
 - WIZnet Ethernet HAT
 - W5100S-EVB-Pico
@@ -144,7 +133,7 @@ Please refer to 'README.md' in each example directory to find detail guide for t
 We moved the MCU dependent code to the port directory. The tree of port is shown below.
 
 ```
-WIZnet-PICO-C
+WIZnet-PICO-HTTP_CLIENT_C
 ┣ port
     ┣ ioLibrary_Driver
     ┃   ┣ inc
@@ -400,19 +389,8 @@ Link
 [link-wiznet_ethernet_hat]: https://docs.wiznet.io/Product/Open-Source-Hardware/wiznet_ethernet_hat
 [link-w5100s-evb-pico]: https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-evb-pico
 [link-w5500-evb-pico]: https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico
-[link-dhcp_dns]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/dhcp_dns
-[link-ftp]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/ftp
-[link-ftp_client]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/ftp/client
-[link-ftp_server]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/ftp/server
-[link-http]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/http
-[link-http_server]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/http/server
-[link-loopback]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/loopback
-[link-mqtt]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/mqtt
-[link-mqtt_publish]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/mqtt/publish
-[link-mqtt_publish_subscribe]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/mqtt/publish_subscribe
-[link-mqtt_subscribe]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/mqtt/subscribe
-[link-sntp]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/sntp
-[link-tcp_client_over_ssl]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/tree/main/examples/tcp_client_over_ssl
+[link-http]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-HTTP_CLIENT_C/tree/main/examples/http
+[link-http_client]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-HTTP_CLIENT_C/tree/main/examples/http/client
 [link-iolibrary_driver]: https://github.com/Wiznet/ioLibrary_Driver
 [link-mbedtls]: https://github.com/ARMmbed/mbedtls
 [link-pico_sdk]: https://github.com/raspberrypi/pico-sdk

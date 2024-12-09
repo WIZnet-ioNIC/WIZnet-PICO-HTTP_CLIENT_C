@@ -112,8 +112,8 @@ uint8_t URI[] = "/search?ei=BkGsXL63AZiB-QaJ8KqoAQ&q=W6100&oq=W6100&gs_l=psy-ab.
 4. Reset your board.
 
 5. If the HTTP Client example works normally on Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2, you can see the network information of Raspberry Pi Pico, W5100S-EVB-Pico, W5500-EVB-Pico, W55RP20-EVB-Pico, W5100S-EVB-Pico2 or W5500-EVB-Pico2 and requests/responses to perform searches on Google with the search term *W5500*
-![image](https://github.com/user-attachments/assets/e08c2be5-e438-43bd-8ddf-ceb824f69d54)
 
+![][link-req_resp_on_google]
 
 
 
@@ -122,8 +122,6 @@ Link
 -->
 
 [link-tera_term]: https://osdn.net/projects/ttssh2/releases/
-[link-raspberry_pi_pico_usb_mass_storage]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/blob/main/static/images/dhcp_dns/raspberry_pi_pico_usb_mass_storage.png
-[link-connect_to_serial_com_port]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/blob/main/static/images/dhcp_dns/connect_to_serial_com_port.png
-[link-see_network_information_of_raspberry_pi_pico_and_open_http_server]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/blob/main/static/images/http/server/see_network_information_of_raspberry_pi_pico_and_open_http_server.png
-[link-connect_to_http_server_1]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/blob/main/static/images/http/server/connect_to_http_server_1.png
-[link-connect_to_http_server_2]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-C/blob/main/static/images/http/server/connect_to_http_server_2.png
+[link-raspberry_pi_pico_usb_mass_storage]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-HTTP_CLIENT_C/blob/main/static/images/http/client/raspberry_pi_pico_usb_mass_storage.png
+[link-connect_to_serial_com_port]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-HTTP_CLIENT_C/blob/main/static/images/http/client/connect_to_serial_com_port.png
+[link-req_resp_on_google]: https://github.com/WIZnet-ioNIC/WIZnet-PICO-HTTP_CLIENT_C/blob/main/static/images/http/client/req_resp_on_google.png
